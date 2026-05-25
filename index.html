@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">My Homepage</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="career.html">Career</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+
+
+
+    <!-- 主内容区 -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- 模块1: 背景介绍 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="text-center">Background<br>个人介绍</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Graduated from Southwest Jiaotong University with a major in Transportation Equipment and Control acquiring a bachelor's degree in engineering.</p>
+                        <p>本科毕业于西南交通大学交通设备与控制专业，取得工学学士学位；</p>
+                        <p>Served as an officer of the Student Council and actively organized and participated in social activities and competitions both on and off campus</p>
+                        <p>担任学生会干事，积极组织和参与参加校内校外社会活动和比赛</p>                        
+                    </div>
+                    <div class="card-footer">
+                        <a href="about.html" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 模块2: 兴趣爱好 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="text-center">Hobbies<br>兴趣爱好</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Daily training includes aerobic exercise, yoga, Pilates, Tai Ji.</p>
+                        <p class="card-text">日常训练包括有氧运动，瑜伽，普拉提，太极.</p>
+                        <p class="card-text">Enjoy playing RPG games and would like to try more outdoor activities like skiing, surfing， horseback riding.</p>
+                        <p class="card-text">喜欢玩RPG游戏 ，也想要体验更多的户外运动如滑雪、冲浪、骑马等</p>
+                    </div>  
+                    <div class="card-footer">
+                        <a href="hobbies.html" class="btn btn-outline-primary">Learn More</a>
+                    </div>                  
+                </div>
+            </div>
+
+            <!-- 模块3: 深造及就业 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-header bg-warning text-dark">
+                        <h3 class="text-center">Career & Furthur Education<br>职业发展和教育深造</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Currently studying CS50's Introductio for Computer Science of Harvard University and plan
+                            to continue furthur study on AI and software development.</p>
+                        <p class="card-text">目前正在学习哈佛的CS50计算机科学课程，未来会继续进行AI领域以及软件开发领域的深造和学习</p>
+                        <p class="card-text">Working experience includes data analysis job in a state-owned commercial bank and software 
+                            development for an animation art creation company 
+                        </p>
+                        <p class="card-text">工作和实践经历包括在一家国有银行做数据分析类工作，以及为一家动漫艺术创意多媒体公司做软件开发类工作</p>                      
+                       <div class="card-footer">
+                        <a href="career.html" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript 交互 -->
+    <script>
+        // 页面加载时显示欢迎消息
+        window.onload = function() {
+            alert("Welcome to my personal homepage!");
+        };
+
+        // 为所有按钮添加点击效果
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                this.style.backgroundColor = '#e0e0e0';
+                setTimeout(() => {
+                    this.style.backgroundColor = '';
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>
+

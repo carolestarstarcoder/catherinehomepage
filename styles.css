@@ -1,0 +1,79 @@
+/* 1. 标签选择器 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. 类选择器 */
+.card {
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 3. ID 选择器 */
+#navbarNav {
+    justify-content: flex-end;
+}
+
+/* 4. 属性选择器 */
+a[href="about.html"] {
+    color: #0d6efd;
+}
+
+/* 5. 伪类选择器 */
+.nav-link:hover {
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+/* 6. 媒体查询（响应式设计） */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 15px;
+    }
+}
+
+/* 7. Flexbox 布局 */
+.navbar-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 8. 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* 9. 边距和填充 */
+.container {
+    padding: 20px;
+}
+
+/* 10. 颜色和背景 */
+.bg-primary {
+    background-color: #0d6efd !important;
+}
+
+.bg-info {
+    background-color: #0dcaf0 !important;
+}
+
+.bg-success {
+    background-color: #198754 !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+}

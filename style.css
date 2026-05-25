@@ -1,0 +1,151 @@
+/* ========================================
+   主色调定义
+   ======================================== */
+:root {
+    --primary-blue: #1A3C6E;      /* 深蓝色 - 用于主要文字和标题 */
+    --text-blue: #0D2746;         /* 更深的蓝 - 用于段落文字，确保高对比度 */
+    --apricot-bg: #FDE8D0;        /* 淡雅杏粉 - 用于页面和卡片背景 */
+    --apricot-light: #FFF1E6;     /* 极淡杏粉 - 用于卡片头部或特定区块 */
+    --accent-blue: #4A90E2;       /* 强调蓝 - 用于链接或交互元素 */
+    --border-color: #E8D5C4;      /* 边框色 - 柔和的杏粉调 */
+}
+
+/* ========================================
+   基础重置与全局样式
+   ======================================== */
+body {
+    background-color: var(--apricot-bg);
+    color: var(--text-blue);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    /* 确保文字在浅色背景上清晰可读 */
+    color: var(--text-blue);
+}
+
+/* ========================================
+   导航栏自定义
+   ======================================== */
+.navbar {
+    background-color: var(--primary-blue) !important;
+}
+
+.navbar-brand {
+    color: #FFFFFF !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important; /* 半透明白，更柔和 */
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #FFFFFF !important;
+}
+
+/* 当前活动页面的下划线指示器 */
+.navbar-nav .nav-item.active .nav-link {
+    border-bottom: 2px solid var(--apricot-bg);
+}
+
+/* 移动端折叠菜单的背景 */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: rgba(26, 60, 110, 0.98);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* ========================================
+   卡片组件样式
+   ======================================== */
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 60, 110, 0.05); /* 非常柔和的阴影 */
+    overflow: hidden; /* 确保圆角应用于内容 */
+}
+
+.card-header {
+    background-color: var(--apricot-light) !important;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--primary-blue) !important;
+    padding: 1.25rem 1.5rem;
+}
+
+.card-header h2 {
+    margin-bottom: 0;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* ========================================
+   标题与段落样式
+   ======================================== */
+h2, h3, h4, h5, h6 {
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    border-left: 4px solid var(--accent-blue);
+    padding-left: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--text-blue);
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* ========================================
+   链接样式
+   ======================================== */
+a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary-blue);
+    text-decoration: underline;
+}
+
+/* ========================================
+   页脚样式
+   ======================================== */
+footer {
+    background-color: var(--primary-blue) !important;
+    color: #FFFFFF !important;
+    margin-top: auto; /* 如果使用了flex布局，这确保页脚在底部 */
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   响应式调整
+   ======================================== */
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1.25rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+}
